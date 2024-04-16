@@ -1,0 +1,479 @@
+
+/*ROOT: Para guardar variables, mas que todo colores. Copiados y pegados
+desde la rubrica*/
+
+:root{
+    --rojo:  rgb(155, 35, 35);
+    --gris: rgb(220, 220, 220);
+    --blanco: #f1f1f1;
+    --negro:rgb(0, 0, 0);
+    --glitch-left:5px solid red;
+    --glitch-right: 5px solid blue;
+}
+
+/* *: usado para llamar a todos los elementos de la pagina. Quitamos ciertos estilos
+y ya que la fuente para toda la pagina es la misma, tambien se agrega esto aqui*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+    letter-spacing: 1.2;
+}
+
+/*HTML: Para secciozarse del tamaño de la pagina*/
+
+html{
+    background-color: var(--negro);
+    width: 100%;
+    height: 100%;
+}
+
+/*Configuraciones generales para las etiquetas a utilizar*/
+
+a, p{
+    color: var(--blanco);
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
+h1,h2,h3{
+    color: var(--blanco);
+    font-weight: 600;
+}
+
+button{
+    transition: all 0.5s ease;
+    transform: scale(1);
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: var(--blanco);
+    font-weight: 600;
+    border-radius: 100px;
+    border: none;
+    & a{
+        text-decoration:underline;
+        color: var(--negro);
+    }
+}
+
+i{
+    font-size: 20px;
+}
+
+li{
+    color: var(--blanco);
+    margin: 10px;
+}
+
+/*HEADER:
+Configuraciones de la barra de navegación. Segun lo visto en el video, aqui queremos una posicion absoluta para la navbar, pues no
+la queremos ver al scrollear abajo*/
+
+nav{
+    background-color: var(--negro);
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    margin:10px;
+    width: 200px;
+    height: auto;
+}
+
+.img-logo,.img-banner{
+    width: 100%;
+    height: auto;
+}
+
+.accesibility{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu{
+    display: flex;
+    margin: 5px;
+}
+
+.icons{
+    display: flex;
+    margin: 5px;
+}
+
+/*MAIN:
+Configuraciones de la sección 1. Este video va con una position fixed para que se quede siempre en esa posicion
+independientemente de si se scrollea arriba o abajo. Y se da un z-index, para que quede detras de todo*/
+
+#background{
+    width: auto;
+    height: 100%;
+}
+
+.background{
+    z-index: -1;
+    position: fixed;
+    height: auto;
+    width: auto;
+}
+
+/*Configuraciones de la sección 2*/
+
+
+#banner{
+    width: 100%;
+}
+
+/*Configuraciones de la sección 3. Hecha con porcentajes y display:flex*/
+
+#gallery{
+    width: inherit;
+    height: 50rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-gallery{
+    width: 100%;
+    height: 50%;
+    display: flex;
+}
+
+#order-gallery{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#listen-gallery{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#watch-gallery{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#tour-gallery{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Aqui las imagenes se ponen como fondo de un anchor con tamaño, ya que
+en el video se podia ver que la imagen era un hipervinculo*/
+
+.img-watch{
+    width: 200px;
+    height: 200px;
+    background-image: url(../../public/img/watch.webp);
+    background-size: cover;
+}
+
+.img-tour{
+    width: 200px;
+    height: 200px;
+    background-image: url(../../public/img/tour.webp);
+    background-size: cover;
+}
+
+.img-order{
+    width: 200px;
+    height: 200px;
+    background-image: url(../../public/img/Order.webp);
+    background-size: cover;
+}
+
+.img-listen{
+    width: 200px;
+    height: 200px;
+    background-image: url(../../public/img/listen.webp);
+    background-size: cover;
+}
+
+/*Configuraciones de la sección 4. Hecha con porcentajes y display:flex*/
+
+#store{
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/*para el merch y la music-store*/
+
+#merch{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 40%;
+}
+
+#music-store{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 40%;
+}
+
+.div-storeA{
+    background-color: var(--blanco);
+    display: flex;
+    justify-content: center;
+    width: 95%;
+    height: auto;
+}
+
+.div-storeB{
+    background-color: var(--gris);
+    display: flex;
+    justify-content: center;
+    width: 95%;
+    height: auto;
+}
+
+.store-cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 100%;
+    display: flex;
+    & a{
+        font-size: 20px;
+        margin: 5px;
+        text-decoration: underline;
+    }
+    & p{
+        margin: 5px;
+        font-size: 10px;
+    }
+}
+
+.img-store{
+    width: 70%;
+}
+
+/*para los botones y su efecto glitch (en el hover)*/
+
+.container-buttons{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    width: 100%;
+    height: 10%;
+}
+
+.container-buttons div{
+    display: flex;
+    width: 25%;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-buttons div :hover {
+    background-color: rgb(255, 255, 255);
+    opacity: 0.8;
+    display: flex;
+    border-left: var(--glitch-left);
+    border-right: var(--glitch-right);
+    & a{
+        padding: 2px;
+        opacity:unset;
+        border: none;
+    }
+}
+
+/*Configuraciones de la sección 5*/
+
+#tour{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.tour-text{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*para la tabla*/
+
+.tour-table{
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+tr{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100%;
+    border-top: var(--blanco) solid 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tr-border{
+    border-bottom: var(--blanco) solid 2px;
+}
+
+td{
+    color: var(--blanco);
+    & a{
+        text-decoration: none;
+    }
+}
+
+/*para los botones y su efecto glitch, dentro de la tabla y el follow */
+
+.td-button :hover {
+    background-color: var(--blanco);
+    opacity: 0.8;
+    display: flex;
+    border-left: var(--glitch-left);
+    border-right: var(--glitch-right);
+    & a{
+        padding: 1px;
+        opacity:unset;
+        border: none;
+    }
+}
+
+.tour-follow{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    & a{
+        text-decoration: none;
+    }
+}
+
+.tour-follow div :hover{
+    background-color: var(--blanco);
+    opacity: 0.8;
+    display: flex;
+    border-left: var(--glitch-left);
+    border-right: var(--glitch-right);
+    & a{
+        padding: 2px;
+        opacity:unset;
+        border: none;
+    }
+}
+
+/*Configuraciones de la sección 6 y su boton con glitch*/
+
+#sign-up{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 100px;
+}
+
+.sign-up-cont{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    & a{
+        text-decoration: none;
+    }
+}
+
+.sign-up-cont div :hover{
+    background-color: rgb(255, 255, 255);
+    opacity: 0.8;
+    display: flex;
+    border-left: var(--glitch-left);
+    border-right: var(--glitch-right);
+    & a{
+        padding: 2px;
+        opacity:unset;
+        border: none;
+    }
+}
+
+/*Configuraciones de la sección 7, iconos de redes y lista con info legal*/
+
+#endbar{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.endbar-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.endbar-text{
+    align-self: center;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.endbar-text-list{
+    gap: 30px;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    & a{
+        font-size: 12px;
+        font-weight: 100;
+    }
+}
+
+.dot-li{
+    list-style:disc;
+}
+
+#endbar{
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
